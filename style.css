@@ -27,6 +27,7 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+
 }
 
 .header {
@@ -40,14 +41,13 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    
-    
 }
 
 .logo{
     font-size: 3.5rem;
     color: var(--text-color);
     font-weight: 600;
+    
 }
 
 .navbar a{
@@ -154,7 +154,12 @@ section .home-content .btn-box .btn:hover::before{
     
     
     
+    
+    
+    
 }
+
+
 
 
 
