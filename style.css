@@ -61,7 +61,7 @@ body{
     color: var(--text-color);
     font-weight: 500;
     margin-left: 3.5rem;
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 
 .navbar a:hover, .navbar a.active{
@@ -141,7 +141,7 @@ section .home-content p{
     color: var(--bg-color);
     z-index: 1;
     overflow: hidden;
-    transition: all .5s ease;
+    transition: .8s;
 }
 
 section .home-content .btn-box .btn:hover{
@@ -327,6 +327,8 @@ section .btn-login{
     cursor: pointer;
 }
 
+
+
 .about{
     display: flex;
     justify-content: center;
@@ -403,6 +405,98 @@ section .btn-login{
 
 .product{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-left: 9rem;
+    
+}
+
+.product .product-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.product-row .producto-column{
+    flex: 1 1 40rem;
+}
+
+.producto-column .title{
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.producto-column .product-box{
+    border-left: .2rem solid var(--second-bg-color);
+}
+
+.product-box .product-content{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.product-box .product-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--second-bg-color);
+    border-radius: 50%;
+}
+
+.product-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--second-bg-color);
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+
+}
+
+.product-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: all .8s ease;
+}
+
+.product-content .content:hover:before{
+    width: 100%;
+
+}
+
+.product-content .content .cart{
+    font-size: 1.5rem;
+    color: var(--second-bg-color);
+    padding-bottom: .5rem;
+}
+
+.product-content .content .cart i{
+    padding-right: .5rem;
+}
+
+.product-content .content .bx-cart{
+    color: var(--text-color);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.product-content .content h3{
+    font-size: 2rem;
+}
+
+.product-content .content p{
+    font-size: 1.6rem;
+    padding-top: .5rem;
 }
 
 
