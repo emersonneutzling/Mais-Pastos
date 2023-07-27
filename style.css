@@ -17,7 +17,7 @@
     --bg-color-2:#112e42;
     --second-bg-color: #008000;
     --text-color: #ededed;
-    --main-color: #06b606;
+    --main-color: #00800076;
 }
 
 html{
@@ -393,9 +393,11 @@ section .btn-login{
     margin: 2rem 0 3rem;
 }
 
-.btn-box.btns{
+.btn-box.btns .btn{
     display: inline-block;
-    width: 15rem;
+    width: 17rem;
+    height: 6rem;
+    padding: 1rem;
 }
 
 .btn-box.btns a::before{
@@ -464,7 +466,7 @@ section .btn-login{
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--main-color);
     z-index: -1;
     transition: all .8s ease;
 }
@@ -480,6 +482,11 @@ section .btn-login{
     padding-bottom: .5rem;
 }
 
+.product-content .content .cart:hover{
+    color: var(--text-color);
+
+}
+
 .product-content .content .cart i{
     padding-right: .5rem;
 }
@@ -490,6 +497,8 @@ section .btn-login{
     cursor: pointer;
 }
 
+
+
 .product-content .content h3{
     font-size: 2rem;
 }
@@ -497,6 +506,64 @@ section .btn-login{
 .product-content .content p{
     font-size: 1.6rem;
     padding-top: .5rem;
+}
+
+.contact{
+    min-height: auto;
+    padding-bottom: 7rem;
+    background: var(--bg-color-2);
+}
+
+.contact form{
+   max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form .input-box{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contact form .input-box .input-field input, 
+.contact form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--second-bg-color);
+}
+
+.contact form .input-box .input-field input::placeholder, 
+.contact form .textarea-field textarea::placeholder{
+    color: var(--text-color);
+}
+
+.contact form .textarea-field{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contact form .textarea-field textarea{
+    resize: none;
+}
+
+.contact form .btn-box.btns .btn{
+    cursor: pointer;
+    width: 17rem;
+    height: 6rem;
 }
 
 
