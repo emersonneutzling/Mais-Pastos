@@ -42,6 +42,11 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: all .5s ease;
+}
+
+.header.sticky{
+    background: var(--bg-color-2);
 }
 
 .logo{
@@ -108,6 +113,25 @@ section .home-content .text-animetion h3{
     font-weight: 800;
     color: transparent;
     -webkit-text-stroke: .7px var(--second-bg-color);
+    background-image: linear-gradient(var(--second-bg-color), var(--second-bg-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+section .home-content .text-animetion h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--second-bg-color);
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 section .home-content p{
@@ -377,6 +401,7 @@ section .btn-login{
     border-bottom: .2rem solid var(--second-bg-color);
     border-left: .2rem solid var(--bg-color-2);
     border-right: .2rem solid var(--bg-color-2);
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about-content{
@@ -566,6 +591,163 @@ section .btn-login{
     height: 6rem;
 }
 
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.1rem 9%;
+}
+
+.footer-texto p{
+    font-size: 1.6rem;
+}
+
+.fotter-icons a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    border-radius: .6rem;
+    color: var(--bg-color);
+    
+}
+
+.fotter-icons a i{
+    font-size: 2.4rem;
+}
+
+@keyframes homeBgText {
+    0%,
+    10%,
+    100% {
+        background-position: -40rem 0;
+    }
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+
+}
+
+@keyframes homeCursorText {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    65%,
+    78%,
+    85%{
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+
+}
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 4%;
+    }
+    section{
+        padding: 10rem 4% 2rem;
+    }
+
+    .home{
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 768px){
+    .header {
+        background: var(--bg-color-2);
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    .navbar{
+       position: absolute;
+       top: 100%;
+       left: -100%;
+       width: 100%;
+       padding: 1rem 4%;
+       background: rgba(17, 46, 65, 0.486);
+       box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.486);
+       transition: .25s ease;
+       transition-delay: .25s;
+
+    }
+
+    .navBar.active{
+        left: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar .active-nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .navbar a{
+        display: block;
+        font: 2rem;
+        margin: 3rem 0;
+    }
+}
+
+@media (max-width: 528px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 365px){
+   
+   .home{
+        
+        justify-content: center;
+    }
+
+    section .main-login{
+        display: none;
+    }
+
+    .home-content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section.about{
+        max-width: 100%;
+        background: red;
+    }
+
+    .about .about-img img{
+        background: red;
+    }
+
+}
 
 
 
