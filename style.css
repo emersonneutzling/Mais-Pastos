@@ -359,7 +359,6 @@ section .btn-login{
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    background: var(--bg-color-2);
     padding-bottom: 6rem;
 }
 
@@ -536,7 +535,7 @@ section .btn-login{
 .contact{
     min-height: auto;
     padding-bottom: 7rem;
-    background: var(--bg-color-2);
+  
 }
 
 .contact form{
@@ -680,6 +679,9 @@ section .btn-login{
     #menu-icon{
         display: block;
     }
+    section .main-login{
+        display: none;
+     }  
 
     .navbar{
        position: absolute;
@@ -718,6 +720,9 @@ section .btn-login{
     html{
         font-size: 50%;
     }
+    section .main-login{
+        display: none;
+     }  
 }
 
 @media (max-width: 365px){
@@ -727,9 +732,10 @@ section .btn-login{
         justify-content: center;
     }
 
-    section .main-login{
+     section .main-login{
         display: none;
-    }
+     }  
+      
 
     .home-content{
         display: flex;
