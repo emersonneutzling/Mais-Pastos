@@ -740,13 +740,10 @@ section .btn-login{
 
     section.about{
         max-width: 100%;
-        background: red;
+        
     }
 
-    .about .about-img img{
-        background: red;
-    }
-
+   
 }
 
 
